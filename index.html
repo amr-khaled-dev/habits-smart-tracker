@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart Habits & Focus Tracker Application">
+    <meta name="author" content="Amr Khaled">
+    <title>Smart Tracker</title>
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/smartTracker.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-regular fa-lightbulb fa-2x"></i>
+            <h2>Smart Tracker</h2>
+        </div>
+        <div id="togglers" class="togglers">
+            <button id="openDialogBtn" class="add-panel-btn"><i class="fa-solid fa-plus"></i> Add Habit</button>
+            <div class="notifi-toggler">
+                <i id="notifiIcon" class="fa-solid fa-bell"></i>
+            </div>
+            <div class="theme-toggler">
+                <!-- <i class="fa-solid fa-sun active"></i> -->
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div id="habitCounter" class="habit-counter">
+            <!-- Habit counter cards will be dynamically added here -->
+        </div>
+        <dialog class="habit-dialog" id="inputDialog">
+            <form action="#" id="habitForm" class="input-section" method="dialog">
+                <div class="dialog-header">
+                    <span class="dialog-badge">New</span>
+                    <h3>Add New Habit</h3>
+                    <button id="closeDialogBtn" class="dialog-close" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="dialog-body">
+                    <p>What do you want to focus on today/this week?</p>
+                    <div class="input-field">
+                        <label for="habitInput">Habit Name</label>
+                        <input type="text" placeholder="e.g., Drink Water" id="habitInput" class="input" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="targetInput">Target</label>
+                        <input type="number" placeholder="e.g., 4" id="targetInput" min="1" max="100" class="input"
+                            required>
+                    </div>
+                    <div class="radio-frequency" role="radiogroup" aria-label="Habit Frequency">
+                        <span>Frequency</span>
+                        <div class="radio">
+                            <input type="radio" name="habitFrequency" id="daily" value="daily" checked>
+                            <label for="daily">Daily</label>
+                            <input type="radio" name="habitFrequency" id="weekly" value="weekly">
+                            <label for="weekly">Weekly</label>
+                        </div>
+                    </div>
+                    <div class="select-periorty">
+                        <span class="lable">Priority</span>
+                        <select name="priority" id="habitPriority" required>
+                            <option value="" disabled selected hidden>Please choose an option</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="tagsInput">Tags</label>
+                        <input type="text" placeholder="e.g., Health, Study, Work" id="tagsInput" class="input">
+                    </div>
+                </div>
+                <div class="footer-btns">
+                    <button id="cancelHabitBtn" class="cancel-add-habit" type="button">Cancel</button>
+                    <button id="saveHabitBtn" class="add-habit" type="submit">
+                        <i class="fa-solid fa-plus"></i>Save Habit
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <div class="filters" id="filters">
+            <span class="filters-text">Filter Habits</span>
+            <button data-filter="all">All</button>
+            <button data-filter="active">Active</button>
+            <button data-filter="completed">Completed</button>
+            <button data-filter="paused">Paused</button>
+            <div class="search" role="search">
+                <input type="search" id="searchInput" placeholder="Search Habits & Tags...">
+            </div>
+            <button type="button" id="clearFiltersBtn">Clear</button>
+        </div>
+        <div class="habit-section">
+            <ul id="habitsList" class="habit-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </div>
+        <div id="notifiToast" class="notifi-toast">
+            <!-- Notifications will be dynamically added here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Habits Smart Tracker. Created by Amr Khaled. All rights reserved.</p>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

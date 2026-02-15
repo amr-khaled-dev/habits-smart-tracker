@@ -881,6 +881,10 @@ main .habit-counter .counter-card i {
 footer {
     text-align: center;
     padding: 20px;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
     background: var(--default-background-color);
     color: var(--default-text-color);
     border-top: #ccc 1px solid;

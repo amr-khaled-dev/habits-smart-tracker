@@ -8,6 +8,16 @@ A modern, responsive **Habits & Focus Tracker** web application designed to help
 
 ---
 
+## 📸 Project Preview
+
+### Light Mode
+![Smart Tracker - Light Theme](FinalUI.PNG)
+
+### Dark Mode
+![Smart Tracker - Dark Theme](FinalUIDark.PNG)
+
+---
+
 ## ✨ Features
 
 - 📝 **Add & Manage Habits** - Create habits with custom targets and frequencies
